@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Card.css";
 
-//testff
+//testfff
 const plant = {
     name: "Rose",
     precentage: "50%",
