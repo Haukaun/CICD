@@ -1,0 +1,18 @@
+
+##Diplay of the used Heat
+description: Portfolio Assignment
+heat_template_version: '2015-04-30'
+resources:
+  my_instance:
+    properties:
+      flavor: m1.small
+      image: Ubuntu Server 20.04 (Focal) amd64 20200424
+      key_name: MacBookkey
+      networks:
+      - network: MyInitialNetwork
+    type: OS::Nova::Server
+  new_volume:
+    depends_on: my_instance
+    properties:
+      size: 1
+    type: OS::Cinder::Volume
