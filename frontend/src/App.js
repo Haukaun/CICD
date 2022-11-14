@@ -1,5 +1,6 @@
 import './App.css';
 import CardList from './components/card/CardList.js';
+import React from 'react';
 
 export default function App() {
   return (
