@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Card.css";
-//Comments
+
 
 const plant = {
     name: "Rose",
@@ -16,7 +16,7 @@ function Card() {
             <h2>{plant.precentage}</h2>
         </div>
         <div className="card-info">
-            <h2>Plant: {plant.name}</h2>
+            <h2>PlantName: {plant.name}</h2>
             <h2>Humidity: {plant.precentage}</h2>
             <h2>Last watered: {plant.last_watered}</h2>
             <div className="latin-plant">
