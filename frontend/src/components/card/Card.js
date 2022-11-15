@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Card.css";
-//Comments
+//Commentsf
 
 const plant = {
     name: "Rose",
