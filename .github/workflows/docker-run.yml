@@ -17,10 +17,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Pull projeckt    
+      run: cd /home/ubuntu/CICD/ && git pull
     - run: |
-	cd /home/ubuntu/CICD && git pull
         sudo docker stop Suwie
         sudo docker rm Suwie
         sudo docker build -t portfolio /home/ubuntu/CICD/frontend
-        sudo docker run -d -p 3000:3000 --name Suwie portfolio
-        
+        sudo docker run -d -p 3000:3000 --name Suwie portfolio        
