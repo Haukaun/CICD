@@ -12,13 +12,13 @@ jobs:
     runs-on: self-hosted
 
     steps:
+    - uses: repo-sync/pull-request@v2
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-	sudo git pull /home/ubuntu/CICD
         sudo docker stop Suwie
         sudo docker rm Suwie
         sudo docker build -t portfolio /home/ubuntu/CICD/frontend
