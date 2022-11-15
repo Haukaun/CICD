@@ -18,6 +18,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
+	cd /home/ubuntu/CICD && git pull
         sudo docker stop Suwie
         sudo docker rm Suwie
         sudo docker build -t portfolio /home/ubuntu/CICD/frontend
