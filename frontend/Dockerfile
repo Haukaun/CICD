@@ -1,5 +1,4 @@
-FROM node:14-alpine AS DEVELOPMENT
-ENV NODE_ENV development
+FROM node:14-alpine
 
 WORKDIR /frontend
 
