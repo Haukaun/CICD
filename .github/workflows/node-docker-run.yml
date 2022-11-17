@@ -17,7 +17,8 @@ jobs:
       with:
         cache: 'npm'
         cache-dependency-path: './frontend/package-lock.json'
-    - run: cd /home/ubuntu/CICD/ && git pull
+    - name: Pull projeckt    
+      run: cd /home/ubuntu/CICD/ && git pull
     - run: npm ci --prefix frontend/
     - run: npm run build --if-present --prefix frontend/
 
@@ -32,7 +33,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Pull projeckt    
     - run: |
         sudo docker stop Suwie
         sudo docker rm Suwie
