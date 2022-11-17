@@ -37,4 +37,4 @@ jobs:
         sudo docker stop Suwie
         sudo docker rm Suwie
         sudo docker build -t portfolio /home/ubuntu/CICD/frontend
-        sudo docker run -d -p 3000:3000 --name Suwie portfolio        
+        sudo docker run -d -p {secrets.DOCKER_PORT}:{secrets.DOCKER_PORT} --name Suwie portfolio        
