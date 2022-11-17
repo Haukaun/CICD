@@ -6,7 +6,7 @@ const plant = {
     name: "Rose",
     precentage: "50%",
     last_watered: "10:00",
-    latin: "RosaHelikopter"
+    latin: "Rosa"
 };
 
 function Card() {
