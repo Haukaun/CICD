@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [ "master" ]
 
+
 jobs:
   node-test:
 
@@ -34,7 +35,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: |
-        sudo docker stop Suwie
-        sudo docker rm Suwie
+        sudo docker stop ${{secrets.DOCKER_CONTAINER}}
+        sudo docker rm ${{secrets.DOCKER_CONTAINER}}
         sudo docker build -t portfolio /home/ubuntu/CICD/frontend
-        sudo docker run -d -p 3000:3000 --name Suwie portfolio        
+        sudo docker run -d -p ${{secrets.DOCKER_PORT}}:${{secrets.DOCKER_PORT}} --name ${{secrets.DOCKER_CONTAINER}} portfolio        
